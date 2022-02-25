@@ -1,0 +1,14 @@
+{
+    "$schema": "http://on.cypress.io/cypress.schema.json",
+    "defaultCommandTimeout": 6000,
+    "viewportWidth": 1200,
+    "viewportHeight": 960,
+    "chromeWebSecurity": true,
+    "reporter": "mochawesome",
+    "testFiles": "**/*.feature",
+    "retries": {
+      "runMode": 1,
+      "openMode": 1
+    }
+  
+  }

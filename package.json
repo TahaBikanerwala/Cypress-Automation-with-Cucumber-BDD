@@ -1,0 +1,25 @@
+{
+  "name": "cypress-bdd-project",
+  "version": "1.0.0",
+  "description": "A project to demonstrate BDD development with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": ".\\node_modules\\.bin\\cypress run --spec cypress\\integration\\BDD\\ecommerce.feature",
+    "generateReport": "npm run test -- --reporter mochawesome",
+    "headedMode": "npm run generateReport -- --headed",
+    "recordDashBoard": "npm run generateReport -- --record --key {keyhere}"
+  },
+  "author": "taha",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "cypress": "^9.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.2.1",
+    "mochawesome": "^7.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
