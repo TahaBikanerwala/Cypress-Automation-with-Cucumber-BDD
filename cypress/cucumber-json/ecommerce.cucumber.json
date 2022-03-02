@@ -1,0 +1,73 @@
+[
+  {
+    "description": "A demo Ecommerce Application",
+    "keyword": "Feature",
+    "name": "End to End Ecommerce Validation",
+    "line": 1,
+    "id": "end-to-end-ecommerce-validation",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-ecommerce-validation;ecommerce-product-order",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Ecommerce product order",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "User visits Ecommerce HomePage",
+            "result": {
+              "status": "passed",
+              "duration": 5828000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Navigates to Products Page",
+            "result": {
+              "status": "passed",
+              "duration": 3962000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Adds items to Cart",
+            "result": {
+              "status": "passed",
+              "duration": 3967000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Compares Total price",
+            "result": {
+              "status": "passed",
+              "duration": 414000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "select country and verify",
+            "result": {
+              "status": "passed",
+              "duration": 10498000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
