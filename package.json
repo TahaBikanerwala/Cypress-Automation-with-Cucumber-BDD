@@ -4,7 +4,7 @@
   "description": "A project to demonstrate BDD development with Cypress",
   "main": "index.js",
   "scripts": {
-    "test": ".//node_modules//.bin//cypress run --spec cypress//integration//BDD//ecommerce.feature",
+    "test": ".//node_modules//.bin//cypress run --spec cypress//e2e//BDD//ecommerce.feature",
     "generateReport": "npm run test -- --reporter mochawesome",
     "headedMode": "npm run generateReport -- --headed",
     "recordDashBoard": "npm run generateReport -- --record --key {keyhere}"
