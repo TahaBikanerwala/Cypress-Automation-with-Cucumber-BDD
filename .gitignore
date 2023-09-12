@@ -1,1 +1,4 @@
 **/node_modules
+**/.history/*
+**/mochawesome-report/*
+cypress/cucumber-json/*
