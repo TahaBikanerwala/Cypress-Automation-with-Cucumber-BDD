@@ -20,18 +20,18 @@ Given('User visits Ecommerce HomePage', function () {
     cy.visit('https://rahulshettyacademy.com/angularpractice/')
 })
 
-When('Navigates to Products Page', function () {
+When('User Navigates to the Products Page', function () {
     homePage.getShopButton().click()
 })
 
-When('Adds items to Cart', function () {
+When('Adds items to the Cart', function () {
     dataa.products.forEach(function (productName) {
         cy.selectProduct(productName, '.card-title a', '.btn.btn-info')
     })
     productPage.getCheckoutButton().click()
 })
 
-When('Compares Total price', function () {
+When('Compares the Total price of all the Products in cart', function () {
     var sum = 0;
     productPage.getProductAmount().each((el, index, list) => {
         const priceTxt = el.text()
@@ -51,17 +51,21 @@ When('Compares Total price', function () {
     })
 })
 
-Then('select country and verify', () => {
+When('Selects country of resident', () => {
     checkoutPage.getCheckOutButton().click()
     locationPage.getDropDown().type('a')
     locationPage.getSuggestionList().contains(dataa.deliveryLocation).click()
     locationPage.getTermsCheckBox().check({
         force: true
     })
-    locationPage.getPurchaseBtn().click()
-    locationPage.getSuccessMessage().then(function (element) {
-        const textMsg = element.text()
-        expect(textMsg.includes('Success! Thank you!')).to.be.true
+    
 
+    })
+
+    Then('The product should be purchased',()=>{
+        locationPage.getPurchaseBtn().click()
+        locationPage.getSuccessMessage().then(function (element) {
+            const textMsg = element.text()
+            expect(textMsg.includes('Success! Thank you!')).to.be.true
     })
 })
