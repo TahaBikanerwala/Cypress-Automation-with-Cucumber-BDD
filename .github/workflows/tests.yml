@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
-
   build_windows:
     runs-on: windows-latest
     steps:
@@ -36,8 +33,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
 
   test_ubuntu:
     runs-on: ubuntu-latest
@@ -47,10 +42,16 @@ jobs:
       - name: Run Cypress tests on Ubuntu
         run: npx cypress run
 
+      - name: Install dependencies
+        run: npm ci
+
   test_windows:
     runs-on: windows-latest
     needs: 
       build_windows
     steps:
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run Cypress tests
         run: npx cypress run
