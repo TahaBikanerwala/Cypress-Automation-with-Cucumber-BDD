@@ -4,17 +4,17 @@ on:
   push:
     branches:
       - main 
-      - refinements
+      
   pull_request:
     branches:
       - main 
       - refinements
 
 jobs:
-  test_ubuntu:
+  build_and_test_ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout 
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -25,10 +25,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Cypress tests
+      - name: Run Cypress tests on Ubuntu
         run: npx cypress run
-        
-  tes_windows:
+
+  build_and_test_windows:
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -42,5 +42,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Cypress tests
+      - name: Run Cypress tests on Windows
         run: npx cypress run
