@@ -21,6 +21,7 @@ Given("User visits Ecommerce HomePage", function () {
 
 When("User Navigates to the Products Page", function () {
   homePage.getShopButton().click();
+  
 });
 
 When("Adds items to the Cart", function () {
